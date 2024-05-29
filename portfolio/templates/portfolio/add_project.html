@@ -1,0 +1,34 @@
+{% extends 'portfolio/base.html' %}
+
+{% block content %}
+
+
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-body">
+          <h1 class="text-center mb-4">Add Projects</h1>
+          <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-group">
+              <label for="id_title">Title:</label>
+              <input type="text" name="title" id="id_title" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="id_image">Description:</label>
+              <input type="text" name="description" id="id_description" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="id_image_url">Project Link:</label>
+              <input type="url" name="project_link" id="id_project_link" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Save</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><br><br>
+{% endblock %}

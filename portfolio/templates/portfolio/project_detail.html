@@ -1,0 +1,19 @@
+{% extends 'portfolio/base.html' %}
+
+{% block content %}
+<div class="container mt-5" style="background-color: #f8f9fa; padding: 20px;">
+    <h2 class="text-center mb-4">Project Details</h2>
+
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-body text-center">
+                    <h3>{{ project.title }}</h3><br>
+                    <p>{{ project.description }}</p><br>
+                    <p><a href="{{project.project_link}}">{{project.project_link}}</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><br><br>
+{% endblock %}

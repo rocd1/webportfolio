@@ -1,0 +1,20 @@
+{% extends 'portfolio/base.html' %}
+
+{% block content %}
+
+  <div class="container mt-5 text-center">
+      <div class="jumbotron">
+          <h1>Latest Blog Posts</h1><br><br><hr>
+          <div class="container text-center">
+              <div class="row">
+                  {% for blog in blogs %}
+                  <div class="col-md-4 mb-4">
+                      <a href="{% url 'blog_detail' blog.slug %}">{{blog.title}}</a><hr>  
+                  </div>
+                  {% endfor %}
+              </div>
+          </div>
+      </div>
+  </div>
+  <hr>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'portfolio/base.html' %}
+
+{% block content %}
+<br><br><br>
+<div class="container">
+    <h1 class="text-info">Login</h1>
+    <form method="POST" autocomplete="off" class="mt-4">
+        {% csrf_token %}
+        <div class="mb-3 text-white">
+            <label for="id_username" class="form-label">Username:</label>
+            <input type="text" name="username" class="form-control" id="id_username">
+        </div>
+        <div class="mb-3 text-white">
+            <label for="id_password" class="form-label">Password:</label>
+            <input type="password" name="password" class="form-control" id="id_password">
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+</div>
+<br>
+<br>
+<br>
+<hr>
+{% endblock %}
